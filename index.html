@@ -80,7 +80,7 @@
                             <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
                         </div>
                         <p class="mb-1 text-xl font-semibold">Wooden Spoon Set</p>
-                        <p class="text-gray-500"> <span id="spoon-price" class="mr-2">39.00 TK</span> <button
+                        <p class="text-gray-500"> <span class="mr-2"><span id="spoon-price">52.00</span> TK</span> <button id="add1"
                                 class="btn btn-sm text-white bg-pink-500 hover:bg-fuchsia-800 py-1">Add <img
                                     src="icons/shopping-cart.png" alt=""></button> </p>
                     </div>
@@ -99,7 +99,7 @@
                             <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
                         </div>
                         <p class="mb-1 text-xl font-semibold">Chopping Board Set</p>
-                        <p class="text-gray-500"> <span id="board-price" class="mr-2">25.00 TK</span> <button
+                        <p class="text-gray-500"> <span class="mr-2"><span id="board-price">25.00</span> TK</span> <button id="add2"
                                 class="btn btn-sm text-white bg-pink-500 hover:bg-fuchsia-800 py-1">Add <img
                                     src="icons/shopping-cart.png" alt=""></button> </p>
                     </div>
@@ -118,7 +118,7 @@
                             <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
                         </div>
                         <p class="mb-1 text-xl font-semibold">Home Cooker</p>
-                        <p class="text-gray-500"> <span id="cooker-price" class="mr-2">52.00 TK</span> <button
+                        <p class="text-gray-500"> <span class="mr-2"><span id="cooker-price">52.00</span> TK</span> <button id="add3"
                                 class="btn btn-sm text-white bg-pink-500 hover:bg-fuchsia-800 py-1">Add <img
                                     src="icons/shopping-cart.png" alt=""></button> </p>
                     </div>
@@ -143,7 +143,7 @@
                             <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
                         </div>
                         <p class="mb-1 text-xl font-semibold">Full Jersey Set</p>
-                        <p class="text-gray-500"> <span id="Jersey-price" class="mr-2">69.00 TK</span> <button
+                        <p class="text-gray-500"> <span class="mr-2"> <span id="jersey-price">69.00</span> TK</span> <button id="add4"
                                 class="btn btn-sm text-white bg-pink-500 hover:bg-fuchsia-800 py-1">Add <img
                                     src="icons/shopping-cart.png" alt=""></button> </p>
                     </div>
@@ -162,7 +162,7 @@
                             <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
                         </div>
                         <p class="mb-1 text-xl font-semibold">Sports Cates</p>
-                        <p class="text-gray-500"> <span id="shoe-price" class="mr-2">159.00 TK</span> <button
+                        <p class="text-gray-500"> <span class="mr-2"> <span id="shoe-price">159.00</span> TK</span> </span> <button id="add5"
                                 class="btn btn-sm text-white bg-pink-500 hover:bg-fuchsia-800 py-1">Add <img
                                     src="icons/shopping-cart.png" alt=""></button> </p>
                     </div>
@@ -180,8 +180,8 @@
                             <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
                             <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
                         </div>
-                        <p class="mb-1 text-xl font-semibold">Sports Black Cap</p>
-                        <p class="text-gray-500"> <span id="cap-price" class="mr-2">29.00 TK</span> <button
+                        <p class="mb-1 text-xl font-semibold" id="capId">Sports Black Cap</p>
+                        <p class="text-gray-500"> <span class="mr-2"> <span id="cap-price">29.00</span> TK</span> <button id="add6"
                                 class="btn btn-sm text-white bg-pink-500 hover:bg-fuchsia-800 py-1">Add <img
                                     src="icons/shopping-cart.png" alt=""></button> </p>
                     </div>
@@ -195,22 +195,22 @@
                         <input type="text" placeholder="Coupon code"
                             class="pl-3 flex-grow outline-none text-gray-600 border-none">
                         <button
-                            class="bg-pink-500 hover:bg-fuchsia-800 text-white font-semibold px-4 py-2 rounded-none -ml-px">
+                            class="btn bg-pink-500 hover:bg-fuchsia-800 text-white font-semibold px-4 py-2 rounded-none -ml-px" disabled>
                             Apply
                         </button>
                     </div>
                 </div>
                 <div class="p-6 bg-white rounded-lg">
-                    <div>
-
+                    <div id="cart-log" class="mb-4">
+                        <!-- items will be added once you click on the "Add" buttons -->
                     </div>
                     <hr class="mb-4">
-                    <h3 class="text-xl font-semibold mb-4 mr-2">Total Price:</h3>
-                    <h3 class="text-xl font-semibold mb-4 mr-2">Discount:</h3>
-                    <h3 class="text-xl font-semibold mb-6 mr-2">Total:</h3>
+                    <h3 class="text-xl font-semibold mb-4">Total Price:&nbsp;$<span id="totalPrice">0.00</span> </h3>
+                    <h3 class="text-xl font-semibold mb-4">Discount:&nbsp;$<span id="discountPrice">0.00</span></h3>
+                    <h3 class="text-xl font-semibold mb-6">Total:&nbsp;$<span id="finalPrice">0.00</span></h3>
                     <hr class="mb-4">
-                    <button id="make-purchase-btn"
-                        class="btn btn-primary text-xl w-full text-white bg-pink-500 hover:bg-fuchsia-800 border-none">Make
+                    <button id="purchase-btn"
+                        class="btn btn-primary text-xl w-full text-white bg-pink-500 hover:bg-fuchsia-800 border-none" disabled>Make
                         Purchase</button>
                 </div>
             </div>
@@ -219,6 +219,7 @@
     </main>
 
     <script src="script/util.js"></script>
+    <script src="script/purchase.js"></script>
 </body>
 
 </html>
