@@ -30,6 +30,7 @@
                     colors: {
                         clifford: '#da373d',
                         'coralDecay': '#F9F6E2',
+                        'grayDecay': '#F8F8F8',
                     }
                 }
             }
@@ -38,16 +39,182 @@
 </head>
 
 <body class="font-work-sans">
+    <!-- HEADER -->
     <header class="bg-coralDecay flex flex-col-reverse md:flex-row items-center justify-between gap-8 py-20 px-56">
-        <div class="banner">
-            <h3 class="text-3xl font-medium">-- SALE FEVER --</h3>
-            
+        <div class="flex flex-col items-center">
+            <h3 class="text-3xl font-medium mb-11">-- SALE FEVER --</h3>
+            <h1 class="font-bold text-6xl leading-[70px] mb-16 text-center">Purchase TK 200 or<br>above & get <span
+                    class="text-pink-500">20% off</span></h1>
+            <div class="flex items-center">
+                <p class="text-2xl font-medium mr-4">Use Promo Code</p>
+                <button
+                    class="btn-lg text-2xl font-medium text-white bg-pink-500 hover:bg-black rounded-lg">"SELL200"</button>
+            </div>
         </div>
         <div>
             <img src="images/Summer 1.png" alt="">
         </div>
     </header>
-    <main>
+
+    <!-- MAIN SECTION -->
+    <main class="bg-grayDecay">
+        <div class="px-56 py-32 flex flex-row gap-8 justify-between">
+            <!-- CARDS -->
+            <div class="cards">
+                <!-- Kitchenware -->
+                <p class="font-semibold text-[2.5rem] mb-8">Kitchenware</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-14">
+                    <!-- card-1 -->
+                    <div class="bg-white flex flex-col items-center p-5 rounded-lg">
+                        <div
+                            class="bg-grayDecay mb-6 rounded-lg h-[10rem] flex justify-center items-center w-full py-8"><!-- w-full means imgs' background full -->
+                            <img class="h-full object-contain" src="images/prod1.png" alt="">
+                        </div>
+                        <div class="rating rating-sm mb-2 flex gap-1">
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"
+                                checked="checked" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                        </div>
+                        <p class="mb-1 text-xl font-semibold">Wooden Spoon Set</p>
+                        <p class="text-gray-500"> <span id="spoon-price" class="mr-2">39.00 TK</span> <button
+                                class="btn btn-sm text-white bg-pink-500 hover:bg-fuchsia-800 py-1">Add <img
+                                    src="icons/shopping-cart.png" alt=""></button> </p>
+                    </div>
+                    <!-- card-2 -->
+                    <div class="bg-white flex flex-col items-center p-5 rounded-lg">
+                        <div
+                            class="bg-grayDecay mb-6 rounded-lg h-[10rem] flex justify-center items-center w-full py-8">
+                            <img class="h-full object-contain" src="images/prod2.png" alt="">
+                        </div>
+                        <div class="rating rating-sm mb-2 flex gap-1">
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"
+                                checked="checked" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                        </div>
+                        <p class="mb-1 text-xl font-semibold">Chopping Board Set</p>
+                        <p class="text-gray-500"> <span id="board-price" class="mr-2">25.00 TK</span> <button
+                                class="btn btn-sm text-white bg-pink-500 hover:bg-fuchsia-800 py-1">Add <img
+                                    src="icons/shopping-cart.png" alt=""></button> </p>
+                    </div>
+                    <!-- card-3 -->
+                    <div class="bg-white flex flex-col items-center p-5 rounded-lg">
+                        <div
+                            class="bg-grayDecay mb-6 rounded-lg h-[10rem] flex justify-center items-center w-full py-8">
+                            <img class="h-full object-contain" src="images/prod3.png" alt="">
+                        </div>
+                        <div class="rating rating-sm mb-2 flex gap-1">
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"
+                                checked="checked" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                        </div>
+                        <p class="mb-1 text-xl font-semibold">Home Cooker</p>
+                        <p class="text-gray-500"> <span id="cooker-price" class="mr-2">52.00 TK</span> <button
+                                class="btn btn-sm text-white bg-pink-500 hover:bg-fuchsia-800 py-1">Add <img
+                                    src="icons/shopping-cart.png" alt=""></button> </p>
+                    </div>
+                </div>
+
+                <!-- Sportswear -->
+                <p class="font-semibold text-[2.5rem] mb-8">Sportswear</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- card-4 -->
+                    <div class="bg-white flex flex-col items-center p-5 rounded-lg">
+                        <div
+                            class="bg-grayDecay mb-6 rounded-lg h-[10rem] flex justify-center items-center w-full py-8">
+                            <img class="h-full object-contain" src="images/prod5.png" alt="">
+                        </div>
+                        <div class="rating rating-sm mb-2 flex gap-1">
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"
+                                checked="checked" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                        </div>
+                        <p class="mb-1 text-xl font-semibold">Full Jersey Set</p>
+                        <p class="text-gray-500"> <span id="Jersey-price" class="mr-2">69.00 TK</span> <button
+                                class="btn btn-sm text-white bg-pink-500 hover:bg-fuchsia-800 py-1">Add <img
+                                    src="icons/shopping-cart.png" alt=""></button> </p>
+                    </div>
+                    <!-- card-5 -->
+                    <div class="bg-white flex flex-col items-center p-5 rounded-lg">
+                        <div
+                            class="bg-grayDecay mb-6 rounded-lg h-[10rem] flex justify-center items-center w-full py-8">
+                            <img class="h-full object-contain" src="images/prod6.png" alt="">
+                        </div>
+                        <div class="rating rating-sm mb-2 flex gap-1">
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"
+                                checked="checked" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                        </div>
+                        <p class="mb-1 text-xl font-semibold">Sports Cates</p>
+                        <p class="text-gray-500"> <span id="shoe-price" class="mr-2">159.00 TK</span> <button
+                                class="btn btn-sm text-white bg-pink-500 hover:bg-fuchsia-800 py-1">Add <img
+                                    src="icons/shopping-cart.png" alt=""></button> </p>
+                    </div>
+                    <!-- card-6 -->
+                    <div class="bg-white flex flex-col items-center p-5 rounded-lg">
+                        <div
+                            class="bg-grayDecay mb-6 rounded-lg h-[10rem] flex justify-center items-center w-full py-8">
+                            <img class="h-full object-contain" src="images/prod4.png" alt="">
+                        </div>
+                        <div class="rating rating-sm mb-2 flex gap-1">
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400"
+                                checked="checked" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                            <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
+                        </div>
+                        <p class="mb-1 text-xl font-semibold">Sports Black Cap</p>
+                        <p class="text-gray-500"> <span id="cap-price" class="mr-2">29.00 TK</span> <button
+                                class="btn btn-sm text-white bg-pink-500 hover:bg-fuchsia-800 py-1">Add <img
+                                    src="icons/shopping-cart.png" alt=""></button> </p>
+                    </div>
+                </div>
+            </div>
+            <!-- CART -->
+            <div class="cart w-[342px] mt-[5.75rem]">
+                <div class="p-6 bg-white rounded-lg mb-6">
+                    <h3 class="text-2xl font-semibold mb-4">Have Coupon?</h3>
+                    <div class="flex items-center border border-gray-300 rounded-lg overflow-hidden">
+                        <input type="text" placeholder="Coupon code"
+                            class="pl-3 flex-grow outline-none text-gray-600 border-none">
+                        <button
+                            class="bg-pink-500 hover:bg-fuchsia-800 text-white font-semibold px-4 py-2 rounded-none -ml-px">
+                            Apply
+                        </button>
+                    </div>
+                </div>
+                <div class="p-6 bg-white rounded-lg">
+                    <div>
+
+                    </div>
+                    <hr class="mb-4">
+                    <h3 class="text-xl font-semibold mb-4 mr-2">Total Price:</h3>
+                    <h3 class="text-xl font-semibold mb-4 mr-2">Discount:</h3>
+                    <h3 class="text-xl font-semibold mb-6 mr-2">Total:</h3>
+                    <hr class="mb-4">
+                    <button id="make-purchase-btn"
+                        class="btn btn-primary text-xl w-full text-white bg-pink-500 hover:bg-fuchsia-800 border-none">Make
+                        Purchase</button>
+                </div>
+            </div>
+        </div>
 
     </main>
 
