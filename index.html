@@ -80,7 +80,7 @@
                             <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
                         </div>
                         <p class="mb-1 text-xl font-semibold">Wooden Spoon Set</p>
-                        <p class="text-gray-500"> <span class="mr-2"><span id="spoon-price">52.00</span> TK</span> <button id="add1"
+                        <p class="text-gray-500"> <span class="mr-2"><span id="spoon-price">39.00</span> TK</span> <button id="add1"
                                 class="btn btn-sm text-white bg-pink-500 hover:bg-fuchsia-800 py-1">Add <img
                                     src="icons/shopping-cart.png" alt=""></button> </p>
                     </div>
@@ -180,7 +180,7 @@
                             <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
                             <input type="radio" name="rating-6" class="mask mask-star-2 bg-orange-400" />
                         </div>
-                        <p class="mb-1 text-xl font-semibold" id="capId">Sports Black Cap</p>
+                        <p class="mb-1 text-xl font-semibold">Sports Black Cap</p>
                         <p class="text-gray-500"> <span class="mr-2"> <span id="cap-price">29.00</span> TK</span> <button id="add6"
                                 class="btn btn-sm text-white bg-pink-500 hover:bg-fuchsia-800 py-1">Add <img
                                     src="icons/shopping-cart.png" alt=""></button> </p>
@@ -192,9 +192,9 @@
                 <div class="p-6 bg-white rounded-lg mb-6">
                     <h3 class="text-2xl font-semibold mb-4">Have Coupon?</h3>
                     <div class="flex items-center border border-gray-300 rounded-lg overflow-hidden">
-                        <input type="text" placeholder="Coupon code"
+                        <input id="couponField" type="text" placeholder="Coupon code"
                             class="pl-3 flex-grow outline-none text-gray-600 border-none">
-                        <button
+                        <button id="apply-btn"
                             class="btn bg-pink-500 hover:bg-fuchsia-800 text-white font-semibold px-4 py-2 rounded-none -ml-px" disabled>
                             Apply
                         </button>
@@ -209,9 +209,27 @@
                     <h3 class="text-xl font-semibold mb-4">Discount:&nbsp;$<span id="discountPrice">0.00</span></h3>
                     <h3 class="text-xl font-semibold mb-6">Total:&nbsp;$<span id="finalPrice">0.00</span></h3>
                     <hr class="mb-4">
-                    <button id="purchase-btn"
+                    <button id="purchase-btn" onclick="my_modal.showModal()"
                         class="btn btn-primary text-xl w-full text-white bg-pink-500 hover:bg-fuchsia-800 border-none" disabled>Make
                         Purchase</button>
+                    <!-- Modal -->
+                    <dialog id="my_modal" class="rounded-xl md:min-w-[32rem] md:min-h-[32rem]">
+                        <div class="lg:mt-16">
+                            <figure class="flex justify-center pt-4">
+                                <img src="images/congo.png" alt="apples" class="rounded-xl w-[35%] lg:w-auto" />
+                            </figure>
+                            <div class="card-body items-center text-center">
+                                <h2 class="card-title mb-3 font-extrabold text-[1.8rem] lg:text-[2.5rem]">Congratulations</h2>
+                                <hr>
+                                <p class="text-slate-500 text-[0.7rem] lg:text-base font-medium mb-3">Your purchase has been successfully processed</p>
+                                <div class="flex items-center justify-between gap-4 lg:gap-7">
+                                    <form method="dialog">
+                                        <button id="close-btn" class="btn btn-outline w-[5.47rem] text-xl bg-pink-500 hover:bg-fuchsia-800 border-none text-white">Close</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </dialog>
                 </div>
             </div>
         </div>

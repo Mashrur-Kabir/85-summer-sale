@@ -15,7 +15,7 @@ function getValue(inputField){
 
 // reusable setText function that sends value for showcase
 function setElementInnerText(textField, result){ // where to set and what to set
-    // finding from DOM by textField's ID and then assigning it. And then setting the 'area' on its innerText for showcasing
+    // finding from DOM by textField's ID and then assigning it. And then setting the *2nd argument* on its innerText for showcasing
     const priceShowcase = document.getElementById(textField);
     priceShowcase.innerText = result;
 }
@@ -29,7 +29,13 @@ function showCartProducts(NameId){
 
     const p = document.createElement('p');
     p.classList.add('font-medium', 'mb-2', 'text-xl');
-    p.innerHTML = `${count + 1}. ${NameId}`;
+    p.innerHTML = `${count + 1}. ${NameId} <button class="btn btn-sm rounded-full text-white bg-red-400 hover:bg-red-700">-</button>`;
 
     cartShowcase.appendChild(p);
+}
+
+// clearing field after purchase
+function clearField(textField, val){
+    const field = document.getElementById(textField);
+    field.innerText = val;
 }
